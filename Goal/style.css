@@ -1,0 +1,180 @@
+/* =====================================================
+   BASE STYLES (LIGHT MODE)
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* Progress bar */
+.progress {
+  height: 22px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  font-weight: 600;
+}
+
+/* List items (sections) */
+.list-group-item {
+  font-size: 0.95rem;
+}
+
+/* Toggle switch label */
+.form-check-label {
+  cursor: pointer;
+}
+
+/* =====================================================
+   DARK MODE OVERRIDES
+===================================================== */
+body.dark {
+  background-color: #0f1115;
+  color: #e6e6e6;
+}
+
+/* Headings & text */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark p,
+body.dark span,
+body.dark label {
+  color: #e6e6e6 !important;
+}
+
+/* List group (sections) */
+body.dark .list-group-item {
+  background-color: #1a1d24;
+  color: #f1f1f1;
+  border-color: #2a2f3a;
+}
+
+/* Checkbox */
+body.dark .form-check-input {
+  background-color: #2a2f3a;
+  border-color: #6c757d;
+}
+
+body.dark .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Progress bar */
+body.dark .progress {
+  background-color: #2a2f3a;
+}
+
+body.dark .progress-bar {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* Alerts */
+body.dark .alert-warning {
+  background-color: #3a2f00;
+  color: #ffdd57;
+  border-color: #665200;
+}
+
+body.dark .alert-success {
+  background-color: #0f5132;
+  color: #d1e7dd;
+  border-color: #146c43;
+}
+
+/* Dark mode toggle label */
+body.dark .form-check-label {
+  color: #e6e6e6;
+}
+
+/* Chart background fix */
+body.dark canvas {
+  background-color: #0f1115 !important;
+}
+
+/* =====================================================
+   SCROLLBAR (OPTIONAL POLISH)
+===================================================== */
+body.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background-color: #2a2f3a;
+  border-radius: 4px;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+@media (max-width: 576px) {
+  .list-group-item {
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    height: 18px;
+  }
+}
+/* =========================
+   FIX FADED HEADER TEXT
+========================= */
+
+/* =====================================================
+   HARD FIX FOR FADED TEXT (BOOTSTRAP OVERRIDES)
+===================================================== */
+
+/* Force ALL text visible in dark mode */
+body.dark * {
+  opacity: 1 !important;
+}
+
+/* Header area fix */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .container,
+body.dark .container * {
+  color: #e6e6e6 !important;
+}
+
+/* Neutralize Bootstrap muted classes */
+body.dark .text-muted,
+body.dark .text-secondary,
+body.dark .opacity-75,
+body.dark .opacity-50 {
+  color: #cfd6e4 !important;
+  opacity: 1 !important;
+}
+
+/* Date text */
+body.dark #date {
+  color: #aeb6c3 !important;
+  font-weight: 500;
+}
+
+/* Toggle label */
+body.dark .form-check-label {
+  color: #e6e6e6 !important;
+}
+
